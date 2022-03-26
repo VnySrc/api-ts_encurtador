@@ -1,5 +1,6 @@
 CRIAR ROTAS DO encurtador
 
 GET - /encurtar/:url-default - encurtar url
-GET - /:url-short
+GET - /:urlshort
 GET - /urls - listar todas url salvas no db
+

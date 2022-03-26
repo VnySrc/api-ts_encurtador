@@ -3,8 +3,8 @@ import * as encurtController from "../controllers/encurtController"
 
 const router = Router()
 
-router.get("/encurtar/:urldefault" , encurtController.urlEncurt)
-
+router.post("/encurtar" , encurtController.urlEncurt)
+router.get("/:urlshort" , encurtController.urlEncurtToDefault)
 
 
 export default router;
