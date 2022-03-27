@@ -1,6 +1,6 @@
 import express, {Request, Response} from "express"
 import dotenv from "dotenv"
-var cors = require('cors')
+import cors from "cors"
 
 import apiRoutes from "./routes/api"
 
@@ -13,8 +13,8 @@ server.use(express.urlencoded({extended: true}));
 
 server.use(apiRoutes)
 
-server.use("/" , (req: Request, res: Response) => {
-    res.json({pong: true})
+server.use((req: Request, res: Response) => {
+    res.redirect("www.127.0.0.1:2000")
 })
 
-server.listen(process.env.PORT || 3000)
+server.listen(process.env.PORT || 2000)

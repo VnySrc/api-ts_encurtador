@@ -39,8 +39,6 @@ export const urlEncurt = async (req: Request, res: Response) => {
 
 }}
 
-
-
 export const urlEncurtToDefault = async (req: Request, res: Response) => {
    const urlShort: string = req.params.urlshort
 
@@ -54,3 +52,15 @@ export const urlEncurtToDefault = async (req: Request, res: Response) => {
    }
    else {res.json({})}
 } 
+
+export const urlFindAll = async (req: Request, res: Response) => {
+   const result = await Urls.findAll({
+      attributes: ["urldefault", "urlshort"]
+   })
+
+   res.json ({result})
+}
+
+export const home = async (req: Request, res: Response) => {
+   res.send("Acesse uma das Rotas / Endpoints para ultilizar a api")
+}
